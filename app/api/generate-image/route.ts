@@ -121,6 +121,7 @@ export async function POST(request: Request) {
 
   try {
     const resultBuffer = await generateStyledImage(model, imageBuffer, prompt);
+
     const imageBase64 = resultBuffer.toString("base64");
 
     const { url: resultImageUrl } = await uploadBufferToImageKit({
