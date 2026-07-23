@@ -1,31 +1,44 @@
 # AI Image Studio
 
-An AI-powered image transformation SaaS that lets users upload a photo and generate six artistic variations while preserving the original identity using FLUX.1 Kontext.
+An AI-powered image transformation SaaS that allows users to upload an image and convert it into six different artistic styles using FLUX.1-Kontext. Built with a modern full-stack architecture using Next.js, TypeScript, PostgreSQL, and Clerk Authentication.
 
-**Live Demo:** https://ai-image-studio-saas-9thn.vercel.app/
+## Live Demo
+
+🔗 https://ai-image-studio-saas-9thn.vercel.app/
 
 ---
 
-## Overview
+## Screenshots
 
-AI Image Studio is a full-stack SaaS application built with the modern Next.js ecosystem. Users can authenticate, upload images, generate AI-powered transformations, track monthly usage, and access generation history.
+### Landing Page
 
-This project demonstrates production-ready architecture including authentication, database integration, AI inference, cloud image storage, monitoring, and deployment.
+<img width="1362" alt="Landing Page" src="https://github.com/user-attachments/assets/d5a15258-c9a3-4a3e-b0db-33ad1af7cfd7" />
+
+### AI Style Transformation
+
+<img width="1362" alt="Generated Result" src="https://github.com/user-attachments/assets/113d5ef7-88ee-4e99-aff0-cb782c6ef03a" />
+
+### Generation History
+
+<img width="642" alt="Generation History" src="https://github.com/user-attachments/assets/9449c5af-2526-4c0e-bd16-7e89c6000b22" />
+
+### Pricing
+
+<img width="1366" alt="Pricing" src="https://github.com/user-attachments/assets/9021df58-23ee-4763-9165-34d3f6257ee9" />
 
 ---
 
 ## Features
 
-- Secure authentication with Google & GitHub (Clerk)
-- Upload images using ImageKit
-- Generate images in 6 curated artistic styles
-- Identity-preserving AI transformations using FLUX.1 Kontext
-- Monthly generation quota tracking
-- Generation history
-- Download generated images
-- Delete previous generations
-- Responsive UI
+- Google & GitHub authentication using Clerk
+- AI-powered image transformation with FLUX.1-Kontext
+- Six artistic styles
+- Secure image upload with ImageKit
+- Monthly generation quota
+- Generation history (view, download, delete)
 - Error monitoring with Sentry
+- Responsive UI
+- Deployed on Vercel
 
 ---
 
@@ -40,50 +53,28 @@ This project demonstrates production-ready architecture including authentication
 | Database | PostgreSQL (Neon) |
 | ORM | Drizzle ORM |
 | Image Storage | ImageKit |
-| AI Model | FLUX.1 Kontext (Hugging Face Inference Providers) |
+| AI Model | FLUX.1-Kontext (Hugging Face Inference Providers) |
 | Monitoring | Sentry |
 | Deployment | Vercel |
 
 ---
 
-## Architecture
-
-```
-Client
-   │
-Next.js App Router
-   │
-Authentication (Clerk)
-   │
-Server Actions / API
-   │
-PostgreSQL (Neon)
-   │
-Drizzle ORM
-   │
-AI Generation
-(Hugging Face + FLUX.1 Kontext)
-   │
-Image Storage (ImageKit)
-```
-
----
-
 ## Getting Started
 
-Clone the repository
+Clone the repository.
 
 ```bash
 git clone https://github.com/Ahsanul-Mostakin/ai-image-studio-saas.git
+cd ai-image-studio-saas
 ```
 
-Install dependencies
+Install dependencies.
 
 ```bash
 npm install
 ```
 
-Create a `.env.local`
+Create a `.env.local` file.
 
 ```env
 DATABASE_URL=
@@ -99,60 +90,10 @@ HF_TOKEN=
 SENTRY_AUTH_TOKEN=
 ```
 
-Run the development server
+Run the development server.
 
 ```bash
 npm run dev
 ```
 
-Visit:
-
-```
-http://localhost:3000
-```
-
----
-
-## Project Highlights
-
-- Production-ready full-stack architecture
-- Modern App Router patterns
-- Type-safe database access with Drizzle ORM
-- Server-side authentication
-- AI image generation workflow
-- Cloud image management
-- Usage tracking system
-- Error monitoring and logging
-
----
-
-## Future Improvements
-
-- Subscription billing (Stripe)
-- Admin dashboard
-- Image collections
-- More AI styles
-- Prompt customization
-- Team workspaces
-- Background removal
-- Image upscaling
-
----
-
-## Author
-
-**Ahsanul Mostakin**
-
-Full Stack Developer (Next.js | TypeScript | PostgreSQL)
-
-GitHub:
-https://github.com/Ahsanul-Mostakin
-
-LinkedIn:
-https://www.linkedin.com/in/ahsanul-mostakin-2251b5192/
-
----
-
-## License
-
-This project is available for learning and portfolio purposes.
+Open http://localhost:3000
